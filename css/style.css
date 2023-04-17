@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border-top: 150px solid red;
+  border-right: 150px solid blue;
+  border-bottom: 150px solid green;
+  border-left: 150px solid orange;
+}
+
+.arrow-right {
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid orange;
+}
+
+.triangle-bottom {
+  width: 400px;
+  height: 500px;
+  background-color: tomato;
+  position: relative;
+}
+
+.triangle-bottom::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  left: 50px;
+  top: 100%;
+  border-top: 50px solid tomato;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid transparent;
+}
